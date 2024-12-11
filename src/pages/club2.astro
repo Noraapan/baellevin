@@ -4,9 +4,18 @@ import Button from "../components/Button.astro";
 import Header from "../components/Header.astro";
 ---
 <Header></Header>
+<div class="flex flex-row justify-between mx-6">
+    <Abbar variant="secondary" size="large" href="/club2">1</Abbar>
+    <a class="text-[12px] hover:underline pl-1" href="/club2">Product</a>
+    <div class="h-px w-full bg-black-500 mt-3 mx-2"></div>
+    <Abbar variant="secondary" size="large" href="/club3">2</Abbar>
+    <a class="text-[12px] hover:underline pl-1" href="/club2">Frequency</a>
+    <div class="h-px w-full bg-black-500 mt-3 mx-2"></div>
+    <Abbar variant="primary" size="large">3</Abbar>
+    <p class="text-[12px] hover:underline pl-1">Checkout</p>
+</div>
 <article>
 <section>
-    <Abbar></Abbar>
     <h3>Choose number of bottles</h3>
     <p>Select the number of wines you would like to recieve.</p>
 </section>
