@@ -2,16 +2,25 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
 import { Image } from 'astro:assets';
+import Abbar from "../components/Abbar.astro";
 ---
 
 <MainLayout title="Titel">
 	<a href="/designsystem">DESIGNSYSTEM MANNEN</a>
 
+	<Abbar variant="primary" size="large">1</Abbar>
+	<Abbar variant="secondary" size="large">2</Abbar>
+	<Abbar variant="tertiary" size="large">3</Abbar>
+
 	<section id="hero" class="bg-blue-500">
-		<video class="w-20 h-auto" autoplay muted loop playsinline>
-			<source src="logomove.mp4" type="video/mp4">
-			Your browser does not support the video tag.
-		</video>
+		<div class="">
+			<img src="logo_white.svg" alt="">
+			<video class="w-9xl h-auto" autoplay muted loop playsinline>
+				<source src="logomove.mp4" type="video/mp4">
+				Your browser does not support the video tag.
+			
+			</video>
+		</div>
 		<h3 class="text-large tracking-cooper font-light font-cooper">Beautiful Wines<br>Valby Langgade 52</h3>
 	</section>
 
