@@ -1,5 +1,6 @@
 ---
 import Abbar from "../components/Abbar.astro";
+import Accordion from "../components/Accordion.astro";
 import Button from "../components/Button.astro";
 import Header from "../components/Header.astro";
 ---
@@ -10,11 +11,64 @@ import Header from "../components/Header.astro";
     <h3>Finalize your wine subscription</h3>
     <p>Fill out the information below to complete your wine subscription and join the Bællevin natural wine journey.</p>
 </section>
-<section class="flex flex-row border-t-black-500 border-b-black-500">
-    <img src="" alt="bundle img">
-    <p>Seasonal bundle</p>
-    <p>3 bottles</p>
-    <p>Every 4th week</p>
-</section>
-
+<article>
+    <div>
+        <section class="flex flex-row border-t-black-500 border-b-black-500 border-t border-b">
+            <img src="" alt="bundle img">
+           <div class="flex flex-col">
+                <p>Seasonal bundle</p>
+                <p>3 bottles</p>
+                <p>Every 4th week</p>
+           </div>
+        
+        </section>
+        <section>
+        <h3>Delivery information</h3>
+        <div id="nyhedsbrev" class="bg-cerice_ text-center py-10">
+            <form name="newsletter" method="POST" data-netlify="true" class="lg:max-w-lg max-w-sm mx-auto">
+              <div class="container mb-6">
+                <h2 class="text-[42px] font-bold text-white text-center mb-2">Tilmeld våres nyhedsbrev</h2>
+                <p class="text-lg text-center">Vær med til at støtte udviklingen af vores miljøarbejde - tilmeld dig vores nyhedsbrev og hold dig opdateret!</p>
+              </div>
+          
+              <div class="container bg-white text-black flex flex-col items-center gap-4 p-6 rounded-md shadow-lg">
+                <input type="text" placeholder="Navn" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cerice_">
+                <input type="email" placeholder="Email address" name="mail" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cerice_">
+                <label class="flex items-center space-x-2">
+                  <input type="checkbox" checked="checked" name="subscribe" class="form-checkbox text-cerice_">
+                  <span>Dagligt nyhedsbrev</span>
+                </label>
+              </div>
+          
+              <div class="container mt-6">
+                <Button variant="primary" size="small" type="submit">Tilmeld</Button>
+              </div>
+            </form>  
+        </div></section>
+        <section>
+            <h3>Payment options</h3>
+        <Accordion></Accordion>
+        <Accordion></Accordion>
+        <Accordion></Accordion>
+        </section>
+    </div>
+    <div>
+        <section>
+            <h3>Total order</h3>
+            <div class="flex flex-row justify-between">
+                <p>Subtotal</p>
+                <p>300 dkk</p>
+            </div>
+            <div class="flex flex-row justify-between">
+                <p>Shipping</p>
+                <p>free</p>
+            </div>
+            <div class="flex flex-row justify-between">
+                <p>Total</p>
+                <p>300 dkk</p>
+            </div>
+            <Button>Join wine club</Button>
+        </section>
+    </div>
+</article>
 </article>
