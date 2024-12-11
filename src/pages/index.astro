@@ -6,108 +6,116 @@ import Abbar from "../components/Abbar.astro";
 ---
 
 <MainLayout title="Titel">
-	<a href="/designsystem">DESIGNSYSTEM MANNEN</a>
+	
+	
 
-	<Abbar variant="primary" size="large">1</Abbar>
-	<Abbar variant="secondary" size="large">2</Abbar>
-	<Abbar variant="tertiary" size="large">3</Abbar>
-
-	<section id="hero" class="bg-blue-500">
-		<div class="">
-			<img src="logo_white.svg" alt="">
-			<video class="w-9xl h-auto" autoplay muted loop playsinline>
+	<section id="hero" class="bg-blue-500 h-screen relative" >
+		<div class="flex flex-col items-center justify-center">
+			<img src="logo_white.svg" alt="Logo" class="w-[895px] h-auto mb-4 mt-20 z-20">
+			<video class="w-9xl h-auto -mt-28 z-10" autoplay muted loop playsinline >
 				<source src="logomove.mp4" type="video/mp4">
 				Your browser does not support the video tag.
-			
 			</video>
 		</div>
-		<h3 class="text-large tracking-cooper font-light font-cooper">Beautiful Wines<br>Valby Langgade 52</h3>
+		<h3 class="text-slogan tracking-cooper font-light font-cooper absolute bottom-36 right-8 text-center text-white z-20" style="letter-spacing: -3.85px;">
+			Beautiful Wines<br>Valby Langgade 52
+		</h3>
 	</section>
-
-	<section id="intro">
 	
+
+	<section id="intro" class="h-screen">
+
 			<div class="grid grid-cols-2">
-				<img src="placeholder.webp" alt="">
-				<div>
-			
-						<h1 class="text">Support your local winedealer</h1>
-						<div class="grid grid-cols-2">
-							<p>Wine bundles from</p>
-							<div class="border-l border-black pl-4"></div>
-							<h2>300DKK</h2>
+				<img src="placeholder.webp" alt="" class="h-screen object-cover border-0 rounded-50">
+				<div >
+						<h1 class=" bg-white border-0 rounded-50">Support your local winedealer</h1>
+						<div class="grid grid-cols-2 bg-white border-0 rounded-50">
+							<div>
+								<p>Wine bundles from</p>
+								<div class="border-b border-black pl-4"></div>
+								<h2>300DKK</h2>
+							</div>
 			
 							<p>Welcome to Bællevin, your local source for the finest natural wines. Whether you're a seasoned connoisseur or a curious beginner, we're here to connect you with unique, responsibly produced wines.</p>
 			
-						</div>
+						
 						<div class="flex flex-row">
 							<Button></Button>
 							<Button></Button>
 						</div>
+					</div>
 				</div>
 			</div>
 	</section>
 
-	<section id="storeimage">
-		<img src="placeholder.webp" alt="full screen image of store">
+	<section id="storeimage" class="h-screen">
+		<img src="placeholder.webp" alt="full screen image of store" class="border-0 rounded-50 h-screen object-cover ">
 	</section>
 
-	<section id="visit">
+	<section id="visit" class="h-screen">
 	
 		<div class="grid grid-cols-2">
 			
 			<div>
-				<h1>Visit us</h1>
-				<div class="grid grid-cols-2">
+				<h1 class="bg-white ">Visit us</h1>
+				<div class="grid grid-cols-2 bg-white">
 						<p>Visit our cozy store</p>
-					<div class="border-l border-black pl-4"></div>
+					<div class="border-b border-black pl-4"></div>
 					<h2>Valby Langgade 52</h2>
 		
 					<p>Come explore our selection of natural wines in person at our cozy shop in the heart of Valby. Whether you’re looking for something special or just want to chat about wine, our friendly staff is here to help you discover your next favorite bottle. We are located at Valby Langgade 52, just a short walk from the Valby train station. Stop by and experience the world of natural wines firsthand!</p>
 		
-				</div>
+				
 				<div class="flex flex-row">
 					<Button></Button>
 					<Button></Button>
 				</div>
 			</div>
-			<img src="placeholder.webp" alt="">
+			</div>
+			<img src="placeholder.webp" alt="" class="h-screen object-cover border-0 rounded-50">
 		</div>
 	</section>
 
-	<section id="join">
+	<section id="join" class="h-screen">
 	
 		<div class="grid grid-cols-2">
-			<img src="placeholder.webp" alt="">
+			<img src="placeholder.webp" alt="" class="h-screen object-cover border-0 rounded-50">
 	
 			<div>
-				<h1>Join the wineclub</h1>
-				<div class="grid grid-cols-2">
+				<h1 class="bg-white">Join the wineclub</h1>
+				<div class="grid grid-cols-2 bg-white">
 					<p>Wine bundles from</p>
-					<div class="border-l border-black pl-4"></div>
+					<div class="border-b border-black pl-4"></div>
 					<h2>300DKK</h2>
 					<p>If choosing your wines feels difficult and boring, or if you lack the time and energy to place an order, you should sign up for a wine subscription here on the website and let wine enthusiasts do the work for you!</p>
-				</div>
+				
 					<Button></Button>
-					
+				</div>
 			</div>
 			</div>
 	</section>
 
-	<section id="What is Natural Wine, Anyway?">
+	<section id="What is Natural Wine, Anyway?" class="h-screen">
 	
-		<div class="grid grid-cols-2">
+		<div class="grid grid-cols-2 ">
 			
 			<div>
-				<h1>Visit us</h1>
-				<div class="grid grid-cols-2">
+				<h1 class="bg-white">Visit us</h1>
+				<div class="grid grid-cols-2 bg-white">
 					<p>Natural wine is made from organically farmed grapes, with no additives or artificial interventions. No added sugars, acids, or preservatives—just pure, unfiltered wine that highlights the true flavors of the grapes and the land. It's a healthier, more sustainable choice that offers an authentic, unique wine experience.</p>
-					<img src="" alt="svg av vinflaska?">
-				</div>
+					<img src="" alt="svg av vinflaska?" class="">
+				
 					<Button></Button>
+				</div>
 			</div>
-			<img src="placeholder.webp" alt="">
+			<img src="placeholder.webp" alt="" class="h-screen object-cover border-0 rounded-50">
 		</div>
 	</section>
+
+	<Abbar variant="primary" size="large">1</Abbar>
+	<Abbar variant="secondary" size="large">2</Abbar>
+	<Abbar variant="tertiary" size="large">3</Abbar>
+	<a href="/designsystem">DESIGNSYSTEM MANNEN</a>
 
 
 </MainLayout>

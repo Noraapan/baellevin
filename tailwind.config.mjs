@@ -75,6 +75,7 @@ export default {
             medium: ["70px", { lineHeight: "auto" }],
             large: ["65px", { lineHeight: "50px" }],
             tiny: ["12px", { lineHeight: "auto", letterSpacing: "1px"}],
+            slogan: ["35px", { lineHeight: "33px", letterSpacing: "-6px"}],
 
           },
       },
