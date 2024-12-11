@@ -25,9 +25,12 @@
     @apply font-cooper;
   }
   h1,
-  h2 {
+  h2,
+  a {
     @apply font-display;
   }
+
+
   /* h1, h2, h3, h4, p, a{
     @apply text-black-500;
   } */
