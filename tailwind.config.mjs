@@ -74,7 +74,7 @@ export default {
             base: ["26px", { lineHeight: "auto", letterSpacing: "1px"}],
             medium: ["70px", { lineHeight: "auto" }],
             large: ["65px", { lineHeight: "50px" }],
-            tiny: ["17px", { lineHeight: "auto", letterSpacing: "1px"}],
+            tiny: ["12px", { lineHeight: "auto", letterSpacing: "1px"}],
 
           },
       },
