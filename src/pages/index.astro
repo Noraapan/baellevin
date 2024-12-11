@@ -6,23 +6,24 @@ import Abbar from "../components/Abbar.astro";
 ---
 
 <MainLayout title="Titel">
-	<a href="/designsystem">DESIGNSYSTEM MANNEN</a>
-
+	
 	<Abbar variant="primary" size="large">1</Abbar>
 	<Abbar variant="secondary" size="large">2</Abbar>
 	<Abbar variant="tertiary" size="large">3</Abbar>
 
-	<section id="hero" class="bg-blue-500">
-		<div class="">
-			<img src="logo_white.svg" alt="">
-			<video class="w-9xl h-auto" autoplay muted loop playsinline>
+	<section id="hero" class="bg-blue-500 h-screen relative">
+		<div class="flex flex-col items-center justify-center">
+			<img src="logo_white.svg" alt="Logo" class="w-[895px] h-auto mb-4 mt-20 z-20">
+			<video class="w-9xl h-auto -mt-20 z-10" autoplay muted loop playsinline>
 				<source src="logomove.mp4" type="video/mp4">
 				Your browser does not support the video tag.
-			
 			</video>
 		</div>
-		<h3 class="text-large tracking-cooper font-light font-cooper">Beautiful Wines<br>Valby Langgade 52</h3>
+		<h3 class="text-slogan tracking-cooper font-light font-cooper absolute bottom-48 right-14 text-center">
+			Beautiful Wines<br>Valby Langgade 52
+		</h3>
 	</section>
+	
 
 	<section id="intro">
 	
@@ -108,6 +109,7 @@ import Abbar from "../components/Abbar.astro";
 			<img src="placeholder.webp" alt="">
 		</div>
 	</section>
+	<a href="/designsystem">DESIGNSYSTEM MANNEN</a>
 
 
 </MainLayout>
