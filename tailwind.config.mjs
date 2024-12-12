@@ -61,6 +61,12 @@ export default {
             '50': '50px',
             'none': '0px',  
           },
+
+          fontWeight: {
+            'roman': '550',  // Example for 55 Roman weight
+            'light': '450',  // Example for 45 Light weight
+          },
+    
     
           fontFamily: {
             display: ["neue-haas-grotesk-display", "sans-serif"],
