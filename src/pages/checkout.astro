@@ -3,15 +3,26 @@ import Abbar from "../components/Abbar.astro";
 import Accordion from "../components/Accordion.astro";
 import Button from "../components/Button.astro";
 import Header from "../components/Header.astro";
+import '../styles/tailwind.css';
+import 'animate.css';
+const { title } = Astro.props;
 ---
 <Header></Header>
-<article>
-<section>
-    <Abbar></Abbar>
-    <h3>Finalize your wine subscription</h3>
-    <p>Fill out the information below to complete your wine subscription and join the Bællevin natural wine journey.</p>
+<section class="bg-white rounded-34">
+    <div class="flex flex-row justify-between mx-6 pt-[46px]">
+        <Abbar variant="secondary" size="large" href="/club2">1</Abbar>
+        <a class="text-[12px] mt-1 hover:underline pl-1" href="/club2">Product</a>
+        <div class="h-px w-full bg-black-500 mt-3 mx-2"></div>
+        <Abbar variant="secondary" size="large" href="/club3">2</Abbar>
+        <a class="text-[12px] mt-1 hover:underline pl-1" href="/club2">Frequency</a>
+        <div class="h-px w-full bg-black-500 mt-3 mx-2"></div>
+        <Abbar variant="primary" size="large">3</Abbar>
+        <p class="text-[12px] mt-1 hover:underline pl-1">Checkout</p>
+    </div>
+    <h3 class="text-large pl-xxs md:pl-2xl lg:pl-6xl pt-[24px] tracking-cooper font-light font-cooper">Finalize your wine subscription</h3>
+    <p class="pb-xs pt-xxs pl-xxs md:pl-2xl lg:pl-6xl">Fill out the information below to complete your wine subscription and join the Bællevin natural wine journey.</p>
 </section>
-<article>
+<article class="bg-white rounded-34">
     <div>
         <section class="flex flex-row border-t-black-500 border-b-black-500 border-t border-b">
             <img src="" alt="bundle img">

@@ -2,24 +2,26 @@
 import Abbar from "../components/Abbar.astro";
 import Button from "../components/Button.astro";
 import Header from "../components/Header.astro";
+import '../styles/tailwind.css';
+import 'animate.css';
+const { title } = Astro.props;
 ---
 <Header></Header>
-<div class="flex flex-row justify-between mx-6">
-    <Abbar variant="secondary" size="large" href="/club2">1</Abbar>
-    <a class="text-[12px] hover:underline pl-1" href="/club2">Product</a>
-    <div class="h-px w-full bg-black-500 mt-3 mx-2"></div>
-    <Abbar variant="secondary" size="large" href="/club3">2</Abbar>
-    <a class="text-[12px] hover:underline pl-1" href="/club2">Frequency</a>
-    <div class="h-px w-full bg-black-500 mt-3 mx-2"></div>
-    <Abbar variant="primary" size="large">3</Abbar>
-    <p class="text-[12px] hover:underline pl-1">Checkout</p>
-</div>
-<article>
-<section>
-    <h3>Choose number of bottles</h3>
-    <p>Select the number of wines you would like to recieve.</p>
+<section class="bg-white rounded-34">
+    <div class="flex flex-row justify-between mx-6 pt-[46px]">
+        <Abbar variant="secondary" size="large" href="/club2">1</Abbar>
+        <a class="text-[12px] mt-1 hover:underline pl-1" href="/club2">Product</a>
+        <div class="h-px w-full bg-black-500 mt-3 mx-2"></div>
+        <Abbar variant="primary" size="large" href="/club3">2</Abbar>
+        <a class="text-[12px] mt-1 hover:underline pl-1" href="/club2">Frequency</a>
+        <div class="h-px w-full bg-black-500 mt-3 mx-2"></div>
+        <Abbar variant="primary" size="large">3</Abbar>
+        <p class="text-[12px] mt-1 hover:underline pl-1">Checkout</p>
+    </div>
+    <h3 class="text-large pl-xxs md:pl-2xl lg:pl-6xl pt-[24px] tracking-cooper font-light font-cooper">Choose number of bottles</h3>
+    <p class="pb-xs pt-xxs pl-xxs md:pl-2xl lg:pl-6xl">Select the number of wines you would like to recieve.</p>
 </section>
-<section>
+<section class="bg-white rounded-34 h-screen">
     <!--Gifen ska med men ska den va background måske?? -->
     <p>Bottles</p>
     <div class="flex flex-row">
@@ -29,4 +31,3 @@ import Header from "../components/Header.astro";
     </div>
     <Button>Next</Button>
 </section>
-</article>
