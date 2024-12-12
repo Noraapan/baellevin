@@ -63,8 +63,10 @@ export default {
       },
 
       fontWeight: {
-        roman: "550", // Example for 55 Roman weight
-        light: "450", // Example for 45 Light weight
+        light: "300",  // Corrected Light weight
+        regular: "400", // Corrected Roman (Regular) weight
+        medium: "500",  // Optional: If Neue Haas Grotesk has a medium weight
+        bold: "700",
       },
 
       fontFamily: {
@@ -77,7 +79,7 @@ export default {
 
       fontSize: {
         small: ["20px", { lineHeight: "auto", letterSpacing: "1px" }],
-        base: ["26px", { lineHeight: "29px", letterSpacing: "1px" }],
+        base: ["26px", { lineHeight: "29px", letterSpacing: "0px" }],
         medium: ["70px", { lineHeight: "auto" }],
         large: ["65px", { lineHeight: "50px" }],
         tiny: ["12px", { lineHeight: "auto", letterSpacing: "1px" }],
