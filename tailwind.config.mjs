@@ -77,7 +77,7 @@ export default {
 
       fontSize: {
         small: ["20px", { lineHeight: "auto", letterSpacing: "1px" }],
-        base: ["26px", { lineHeight: "auto", letterSpacing: "1px" }],
+        base: ["26px", { lineHeight: "29px", letterSpacing: "1px" }],
         medium: ["70px", { lineHeight: "auto" }],
         large: ["65px", { lineHeight: "50px" }],
         tiny: ["12px", { lineHeight: "auto", letterSpacing: "1px" }],
