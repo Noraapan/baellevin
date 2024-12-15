@@ -1,48 +1,34 @@
 ---
-// Få adgang til `variant`, `size`, og `href` fra props
 const { variant = "primary", size = "medium", href } = Astro.props;
 
-// Definér knap-styling
-const buttonStyling = "py-4 px-4 rounded-md  border-2 md transition ease-in-out";
+const buttonStyling = "font-display text-base text-black-500 hover:bg-blue-500 rounded-34 hover:text-white hover:shadow-none active:shadow-inner-50 transition ease-in-out shadow-drop-50 border border-black-500";
 const variantClasses = {
-  secondary: "text-white font-semibold  bg-cerice_ text-poppins  border-cerice_ hover:bg-white hover:text-cerice_",
-  primary: "text-white font-semibold text-poppins tracking-tight border-graphite_light bg-graphite_light hover:bg-white hover:text-graphite_light",
+    primary: "w-full sm:w-[354px] h-[104px] px-[52px] py-[12px] flex items-center justify-center",
+    secondary: "", 
 };
 const sizeClasses = {
-  large: "text-4xl",
-  medium: "text-2xl",
-  small: "text-m",
+  large: "",
+  medium: "",
+  small: "",
 };
 ---
 
 <div>
-  {
-    href ? (
-      <a href={href} class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}>
-        <slot />
-      </a>
-    ) : (
-      <button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}>
-        <slot />
-      </button>
-    )
-  }
+    {
+      href ? (
+        <a href={href} class:list={[buttonStyling, variantClasses[variant], sizeClasses[size], "group"]}>
+          <slot />
+          <svg class="ml-[22px] w-6 h-6 text-black-500 group-hover:text-white transition-colors duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      ) : (
+        <button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size], "group"]}>
+          <slot />
+          <svg class="ml-[22px] w-6 h-6 text-black-500 group-hover:text-white transition-colors duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      )
+    }
 </div>
-
-<!-- ---
-const { variant = "primary", size = "medium" } = Astro.props;
-const buttonStyling = "text-[var(--offwhite)] py-5 px-6 rounded-lg border-2 border-[var(--orange)] rounded md transition ease-in-out uppercase";
-const variantClasses = {
-    "primary": "hover:bg-[var(--orange)]",
-    "secondary": ""
-};
-
-const sizeClasses = {
-    "large": "text-4xl",
-    "medium":"text-2xl",
-    "small":"text-xs"
-};
----
-<div>
-    <button class:list={[buttonStyling, variantClasses[variant], sizeClasses[size]]}><slot /></button>
-</div> -->
