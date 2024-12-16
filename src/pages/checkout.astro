@@ -20,53 +20,57 @@ const { title } = Astro.props;
         <Abbar variant="primary" size="large">3</Abbar>
         <p class="text-[12px] mt-1 hover:underline pl-1">Checkout</p>
     </div>
-    <h3 class="text-blue-500 mt-m text-large pl-xxs md:pl-2xl lg:pl-6xl tracking-cooper font-light font-cooper">Finalize your wine subscription</h3>
+    <h3 class="text-blue-500 mt-m text-slogan lg:text-large pl-xxs md:pl-2xl lg:pl-6xl tracking-tighter font-light font-cooper">Finalize your wine subscription</h3>
     <p class="pb-xs py-xs pl-xxs md:pl-2xl lg:pl-6xl">Fill out the information below to complete your wine subscription and join the Bællevin natural wine journey.</p>
 </section>
-<article class="bg-white rounded-34">
-    <div>
-        <section class="flex flex-row border-t-black-500 border-b-black-500 border-t border-b">
-            <img src="" alt="bundle img">
+<article class="pt-m bg-white rounded-34 md:flex flex-row justify-between px-xxs">
+    <div class="md:max-w-[930px] max-w-sm">
+        <section class="py-xs md:mx-m flex flex-row justify-between px-m border-t-black-500 border-b-black-500 border-t border-b">
+            <img class="w-[170px] rounded-34" src="/bundle.png" alt="bundle img">
            <div class="flex flex-col">
                 <p>Seasonal bundle</p>
                 <p>3 bottles</p>
                 <p>Every 4th week</p>
            </div>
-        
+        <!--quantity -->
         </section>
+           <!-- <h2 class="text-blue-500 text-large font-semibold mt-lg">Delivery information</h2> -->
+        <h3 class="text-blue-500 mt-m text-slogan lg:text-large pl-xxs tracking-tighter font-light font-cooper">Delivery information</h3>
+    
         <section>
-        <h3>Delivery information</h3>
-        <div id="nyhedsbrev" class="bg-cerice_ text-center py-10">
-            <form name="newsletter" method="POST" data-netlify="true" class="lg:max-w-lg max-w-sm mx-auto">
-              <div class="container mb-6">
-                <h2 class="text-[42px] font-bold text-white text-center mb-2">Tilmeld våres nyhedsbrev</h2>
-                <p class="text-lg text-center">Vær med til at støtte udviklingen af vores miljøarbejde - tilmeld dig vores nyhedsbrev og hold dig opdateret!</p>
-              </div>
-          
-              <div class="container bg-white text-black flex flex-col items-center gap-4 p-6 rounded-md shadow-lg">
-                <input type="text" placeholder="Navn" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cerice_">
-                <input type="email" placeholder="Email address" name="mail" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-cerice_">
-                <label class="flex items-center space-x-2">
+            <form name="newsletter" method="POST" data-netlify="true" class="md:max-w-[930px] max-w-sm">
+              <div class="container text-black-500 flex flex-col gap-4 border-b border-black-500 my-m md:mx-m px-m">
+                <input type="text" placeholder="Full name" name="name" required class="w-full px-4 py-2 border border-black-500 rounded-md">
+                <div class="md:flex flex-row md:space-x-4">
+                    <input type="email" placeholder="E-mail" name="mail" required class="md:w-1/2 w-full mb-4 px-4 py-2 border border-black-500 rounded-md">
+                    <input type="text" placeholder="Phone number" name="phone" required class="md:w-1/2 w-full mb-4 px-4 py-2 border border-black-500 rounded-md">
+                </div>
+                <input type="text" placeholder="Street name" name="street name" required class="w-full px-4 py-2 border border-black-500 rounded-md">
+                <div class="md:flex flex-row md:space-x-4">
+                    <input type="text" placeholder="Postal code" name="postal code" required class="md:w-1/2 w-full mb-4 px-4 py-2 border border-black-500 rounded-md">
+                    <input type="text" placeholder="City" name="city" required class="md:w-1/2 w-full mb-4 px-4 py-2 border border-black-500 rounded-md">
+                </div>
+                <label class="flex items-center space-x-2 pb-m">
                   <input type="checkbox" checked="checked" name="subscribe" class="form-checkbox text-cerice_">
                   <span>Dagligt nyhedsbrev</span>
                 </label>
               </div>
-          
-              <div class="container mt-6">
-                <Button variant="primary" size="small" type="submit">Tilmeld</Button>
-              </div>
             </form>  
-        </div></section>
-        <section>
-            <h3>Payment options</h3>
-        <Accordion></Accordion>
-        <Accordion></Accordion>
-        <Accordion></Accordion>
+        </section>
+        <section class="text-black-500 flex flex-col gap-4 border-b border-black-500">
+            <h3 class="text-blue-500 mt-m text-slogan lg:text-large pl-xxs tracking-tighter font-light font-cooper">Payment options</h3>
+            debit card
+            PayPal
+            mobilepay
+        <Accordion>Debit card</Accordion>
+        <Accordion>PayPal</Accordion>
+        <Accordion>MobilePay</Accordion>
         </section>
     </div>
     <div>
-        <section>
-            <h3>Total order</h3>
+        <section class="max-w-sm lg:max-w-[809px] ml-sm bg-black-50 rounded-50 px-m">
+            <h3 class="py-m text-blue-500 mt-m text-slogan lg:text-large text-center tracking-tighter font-light font-cooper">
+                Total order</h3>
             <div class="flex flex-row justify-between">
                 <p>Subtotal</p>
                 <p>300 dkk</p>
@@ -79,7 +83,7 @@ const { title } = Astro.props;
                 <p>Total</p>
                 <p>300 dkk</p>
             </div>
-            <Button>Join wine club</Button>
+            <div class="py-m flex justify-center"><Button variant="primary" size="medium">Complete order</Button></div>
         </section>
     </div>
 </article>
