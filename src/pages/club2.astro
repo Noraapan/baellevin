@@ -19,17 +19,25 @@ import MainLayout from "../layouts/MainLayout.astro";
         <Abbar variant="primary" size="large">3</Abbar>
         <p class="text-[12px] mt-1 hover:underline pl-1">Checkout</p>
     </div>
-    <h3 class="text-large pl-xxs md:pl-2xl lg:pl-6xl pt-[24px] tracking-cooper font-light font-cooper">Choose number of bottles</h3>
-    <p class="pb-xs pt-xxs pl-xxs md:pl-2xl lg:pl-6xl">Select the number of wines you would like to recieve.</p>
+    <h3 class="text-blue-500 text-large pl-xxs md:pl-2xl lg:pl-6xl mt-m tracking-cooper font-light font-cooper">Choose number of bottles</h3>
+    <p class="py-xs pl-xxs md:pl-2xl lg:pl-6xl">Select the number of wines you would like to recieve.</p>
 </section>
-<section class="bg-white rounded-34 h-screen">
-    <!--Gifen ska med men ska den va background måske?? -->
-    <p>Bottles</p>
-    <div class="flex flex-row">
-<Button>3</Button>
-<Button>6</Button>
-<Button>9</Button>
+<section class="bg-white rounded-34 h-screen pt-s">
+     <p class="pl-lg -mb-m">Bottles</p>
+    <div class="flex flex-row justify-center space-x-s py-m">
+       
+<div class=""><Button>3</Button></div>
+<div class=""><Button>6</Button></div>
+<div class=""><Button>9</Button></div>
     </div>
-    <Button>Next</Button>
+    <div class="flex justify-center">
+        <Button variant="primary" size="medium" href="/club3">Next</Button>
+    </div>
+    <img class="mt-xxs md:-mt-2xl ml-s w-6xl lg:w-8xl h-auto" src="/gubbe1.png" alt="">
+    <!--
+    <video class="mt-xxs md:-mt-2xl ml-s w-6xl lg:w-8xl h-auto" autoplay muted loop playsinline >
+        <source src="logomove.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video> -->
 </section>
 </MainLayout>

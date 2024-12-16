@@ -19,19 +19,26 @@ import MainLayout from "../layouts/MainLayout.astro";
         <Abbar variant="primary" size="large">3</Abbar>
         <p class="text-[12px] mt-1 hover:underline pl-1">Checkout</p>
     </div>
-    <h3 class="text-large pl-xxs md:pl-2xl lg:pl-6xl pt-[24px] tracking-cooper font-light font-cooper">Select delivery frequency</h3>
-    <p class="pb-xs pt-xxs pl-xxs md:pl-2xl lg:pl-6xl">Decide how often you would like your Bællevin wine to be delivered.</p>
+    <h3 class="text-blue-500 text-large pl-xxs md:pl-2xl lg:pl-6xl mt-m tracking-cooper font-light font-cooper">Select delivery frequency</h3>
+    <p class="pb-xs py-xs pl-xxs md:pl-2xl lg:pl-6xl">Decide how often you would like your Bællevin wine to be delivered.</p>
 </section>
 
 <section class="bg-white rounded-34 h-screen">
     <!--Gifen ska med men ska den va background måske?? -->
-    <p>Weeks</p>
-    <div class="flex flex-row">
+    <p class="pl-lg -mb-m">Weeks</p>
+    <div class="flex flex-row justify-center space-x-s py-m">
 <Button>2</Button>
 <Button>4</Button>
 <Button>8</Button>
 <Button>Seasonal</Button> <!--what is seasonal info-knapp?????-->
     </div>
-    <Button>Check out</Button>
+    <div class="flex justify-center">
+        <Button variant="primary" size="medium" href="/checkout">Check out</Button>
+    </div>
+    <img class="mt-xxs md:-mt-2xl ml-s w-6xl lg:w-8xl h-auto" src="/gubbe2.png" alt="">
+   <!--<video class="mt-xxs md:-mt-2xl ml-s w-6xl lg:w-8xl h-auto" autoplay muted loop playsinline >
+    <source src="logomove.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video> -->
 </section>
 </MainLayout>
