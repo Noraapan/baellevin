@@ -11,27 +11,27 @@ const { title } = Astro.props;
 <section class="bg-white rounded-34">
     <div class="flex flex-row justify-between mx-6 pt-[46px]">
         <Abbar variant="secondary" size="large" href="/club2">1</Abbar>
-        <a class="text-[12px] mt-1 hover:underline pl-1" href="/club2">Product</a>
+        <a class="text-tiny font-display text-black-500 mt-1 hover:underline pl-1" href="/club2">Product</a>
         <div class="h-px w-full bg-black-500 mt-3 mx-2"></div>
         <Abbar variant="secondary" size="large" href="/club3">2</Abbar>
-        <a class="text-[12px] mt-1 hover:underline pl-1" href="/club3">Frequency</a>
+        <a class="text-tiny font-display text-black-500 mt-1 hover:underline pl-1" href="/club3">Frequency</a>
         <div class="h-px w-full bg-black-500 mt-3 mx-2"></div>
         <Abbar variant="secondary" size="large">3</Abbar>
-        <p class="text-[12px] mt-1 hover:underline pl-1">Checkout</p>
+        <p class="text-tiny font-display text-black-500 mt-1 hover:underline pl-1">Checkout</p>
     </div>
     <h3 class="text-blue-500 mt-m text-slogan lg:text-large pl-xxs md:pl-2xl lg:pl-6xl tracking-tighter font-light font-cooper">Finalize your wine subscription</h3>
-    <p class="pb-xs py-xs pl-xxs md:pl-2xl lg:pl-6xl">Fill out the information below to complete your wine subscription and join the Bællevin natural wine journey.</p>
+    <p class="text-tiny font-display text-black-500 lg:text-base pb-xs py-xs pl-xxs md:pl-2xl lg:pl-6xl">Fill out the information below to complete your wine subscription and join the Bællevin natural wine journey.</p>
 </section>
-<article class="pt-m bg-white rounded-34 md:flex flex-row justify-between px-xxs">
+<article class="pt-m bg-white rounded-34 md:flex flex-row justify-between mx-auto md:mx-xxs">
     <div class="md:max-w-[930px] max-w-sm">
         <section class="py-xs md:mx-m flex flex-row justify-between lg:px-m border-t-black-500 border-b-black-500 border-t border-b">
-            <img class="w-[170px] rounded-34" src="/bundle.png" alt="bundle img">
-           <div class="flex flex-col pl-xs">
+            <img class="w-[100px] md:w-[170px] rounded-34" src="/bundle.png" alt="bundle img">
+           <div class="text-tiny lg:text-base space-y-xs font-display text-black-500 flex flex-col pl-xs">
                 <p>Seasonal bundle</p>
                 <p>3 bottles</p>
                 <p>Every 4th week</p>
            </div> <div class="flex flex-row">
-            <label for="quantity" class="pr-2 text-sm text-black-500">Quantity</label>
+            <label for="quantity" class="text-tiny font-display text-black-500 pr-2">Quantity</label>
             <input 
               type="number" 
               id="quantity" 
@@ -47,7 +47,7 @@ const { title } = Astro.props;
     
         <section>
             <form name="newsletter" method="POST" data-netlify="true" class="md:max-w-[930px] max-w-sm">
-              <div class="container text-black-500 flex flex-col gap-4 border-b border-black-500 my-m md:mx-m px-m">
+              <div class="container text-tiny font-display lg:text-base  text-black-500 flex flex-col gap-4 border-b border-black-500 my-m md:mx-m px-m">
                 <input type="text" placeholder="Full name" name="name" required class="w-full px-4 py-2 border border-black-500 rounded-md">
                 <div class="md:flex flex-row md:space-x-4">
                     <input type="email" placeholder="E-mail" name="mail" required class="md:w-1/2 w-full mb-4 px-4 py-2 border border-black-500 rounded-md">
@@ -91,18 +91,18 @@ const { title } = Astro.props;
         </section>
     </div>
     <div>
-        <section class="max-w-sm lg:max-w-[809px] ml-sm bg-black-50 rounded-50 px-m h-screen mt-48">
+        <section class=" text-tiny font-display text-black-500 lg:text-base max-w-sm lg:max-w-[809px] ml-sm bg-black-50 rounded-50 px-m h-screen mt-48">
             <h3 class="py-m text-blue-500 mt-m text-slogan lg:text-large text-center tracking-tighter font-light font-cooper">
                 Total order</h3>
-            <div class="flex flex-row justify-between text-base mt-10">
+            <div class="flex flex-row justify-between mt-10">
                 <p>Subtotal</p>
                 <p>300 dkk</p>
             </div>
-            <div class="flex flex-row justify-between text-base mt-5">
+            <div class="flex flex-row justify-between mt-5">
                 <p>Shipping</p>
                 <p>free</p>
             </div>
-            <div class="flex flex-row justify-between text-base mt-12">
+            <div class="flex flex-row justify-between mt-12">
                 <p>Total</p>
                 <p>300 dkk</p>
             </div>
