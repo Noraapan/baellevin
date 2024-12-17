@@ -31,11 +31,31 @@ import Radio from "../components/Radio.astro";
         <Radio value="2" name="bottles">2</Radio>
         <Radio value="4" name="bottles">4</Radio>
         <Radio value="8" name="bottles">8</Radio>
-        <Radio value="mix" name="bottles">Seasonal</Radio>
-      </div>
+        
+        <!-- Seasonal Radio with Tooltip -->
+        <div class="relative flex items-center space-x-2">
+            <Radio value="mix" name="bottles">Seasonal</Radio>
+
+            <!-- Info Icon with Tooltip -->
+            <div class="relative group cursor-pointer">
+                <!-- Info "i" Icon -->
+                <div
+                    class="flex items-center justify-center w-6 h-6 bg-gray-300 text-black rounded-full text-xs font-bold z-20">
+                    i
+                </div>
+                <!-- Tooltip -->
+                <div
+                    class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 w-[200px] px-3 text-base font-display py-2 bg-white text-black-500 text-xs rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-30">
+                    Receive a curated selection of wines, perfect for each season, delivered four times a year.
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="flex justify-center">
         <Button variant="primary" size="medium" href="/checkout">Check out</Button>
     </div>
     <img class="mt-xxs md:-mt-5xl ml-s w-6xl lg:w-8xl h-auto" src="/gubbe2.png" alt="wine guy">
 </section>
+
 </MainLayout>
