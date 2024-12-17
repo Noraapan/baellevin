@@ -1,100 +1,97 @@
----
-const { caption, bio, image } = Astro.props;
----
-
-<div>
-  
-  <button class="accordion text-2xl md:text-large flex justify-between items-center">
-    <h1>{caption}</h1>
-    <span class="icon font-extralight"></span>
-  </button>
-
-  
-  <div class="panel grid grid-cols-1 md:grid-cols-2 gap-4 items-start overflow-hidden max-h-0 transition-[max-height]">
-    <p class="pt-8">{bio}</p>
-    <img class="pt-8" src={image} alt="" class="max-w-[300px] -mt-5 mx-auto h-auto">
-  </div>
-  
-  
-  <div class="border"></div>
-</div>
+---  
+const { caption, image } = Astro.props; 
+    const icons = [
+      { name: 'Visa', src: '/visa.svg' },
+      { name: 'Mastercard', src: '/mastercard.svg' },
+      { name: 'Amex', src: '/amex.svg' }
+    ];
+---     
+  <div class="border-b border-black">
+     
+      <button class="accordion w-full flex justify-between items-center py-4">
+        <div class="flex items-center space-x-2">
+          <h2 class="text-slogan font-display tracking-normal">{caption}</h2>
+          <img src={image} alt="" class="h-6 w-6" />
+        </div>
+        <span class="icon"></span>
+      </button>
+    
+     
+      <div class="panel overflow-hidden max-h-0 transition-all duration-500">
+        
+        <form name="payment-form" method="POST" data-netlify="true" class="mt-4">
+          <div class="space-y-4 border-b border-black pb-4">
+            <input type="text" placeholder="Cardholder Name" name="cardholder" required
+              class="w-full px-4 py-2 border border-gray-300 rounded-md">
+            <input type="number" placeholder="Card Number" name="cardnumber" required
+              class="w-full px-4 py-2 border border-gray-300 rounded-md">
+    
+            <div class="flex space-x-4">
+              <input type="text" placeholder="Expiry Date (MM/YY)" name="expiry" required
+                class="w-1/2 px-4 py-2 border border-gray-300 rounded-md">
+              <input type="number" placeholder="CVC" name="cvc" required
+                class="w-1/2 px-4 py-2 border border-gray-300 rounded-md">
+            </div>
+    
+            <label class="flex items-center space-x-2">
+              <input type="checkbox" name="save_card" class="form-checkbox text-black">
+              <span>Save this card for future payments</span>
+            </label>
+          </div>
+        </form>
+    
+       
+      
+      </div>
+    </div>
 
 <style>
   .accordion {
     cursor: pointer;
-    padding: 3px; 
-    width: 100%; 
-    text-align: left; 
-    outline: none; 
-    transition: 0.4s;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    transition: all 0.4s ease;
   }
 
-  
   .icon::before {
-    content: "+"; 
-    display: inline-block;
-    transition: transform 0.4s ease; 
-    font-size: 4.5rem; 
-    color: #FF5900;
+    content: "+";
+    font-size: 1.75rem;
+    display: block;
+    transition: transform 0.4s ease;
   }
 
-  
   .accordion.active .icon::before {
-    transform: rotate(45deg); 
+    transform: rotate(45deg);
   }
 
   .panel {
-    padding: 0 18px; 
-    
-    max-height: 0; 
-    transition: max-height 0.4s ease; 
+    max-height: 0;
     overflow: hidden;
+    transition: max-height 0.4s ease;
   }
 
-  
   .panel.active {
-    max-height: 1000px;
-  }
-
-  
-  .border {
-    height: 2px;
-    background-color: grey; 
-    transition: all 0.4s ease; 
-  }
-
-  
-  .accordion:not(.active) + .border {
-    margin-top: -2px; 
-  }
-
-  
-  .panel.active + .border {
-    margin-top: 20px; 
-  }
-
-  
-  .panel.active {
-    margin-bottom: 2px; 
+    max-height: 1000px; /* Anpassa höjden efter behov */
   }
 </style>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const accordions = document.getElementsByClassName("accordion");
+  document.addEventListener('DOMContentLoaded', () => {
+    const accordions = document.querySelectorAll(".accordion");
 
-    for (let i = 0; i < accordions.length; i++) {
-      accordions[i].addEventListener("click", function () {
-        this.classList.toggle("active"); 
-        
-        const panel = this.nextElementSibling;
-        
-        
+    accordions.forEach(button => {
+      button.addEventListener("click", () => {
+        const panel = button.nextElementSibling;
+
+        button.classList.toggle("active");
         panel.classList.toggle("active");
+
+        // Stänger andra öppna paneler
+        document.querySelectorAll(".panel").forEach(otherPanel => {
+          if (otherPanel !== panel) {
+            otherPanel.classList.remove("active");
+            otherPanel.previousElementSibling.classList.remove("active");
+          }
+        });
       });
-    }
+    });
   });
 </script>
