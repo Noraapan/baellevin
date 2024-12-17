@@ -4,14 +4,13 @@ import Button from '../components/Button.astro';
 import ImgToggle from "../components/ImgToggle.astro"
 ---
 <MainLayout title="Bællevin">
-<article>
+<article class="">
   <section class="py-xs bg-blue-500">
-      
-           <img class="w-[660px]" src="logo_white.svg" alt="Bællevin logo">
+           <img class="w-[720px]" src="logo_white.svg" alt="Bællevin logo">
            <h3 class="lg:text-left text-medium text-center -mt-16 lg:pl-5xl text-white font-cooper font-semibold">Wine Club</h3>
       
-           <section class="md:flex flex-row justify-between">
-            <video class="w-9xl h-auto z-10" autoplay muted loop playsinline>
+           <section class="md:flex flex-row sm:mx-sm justify-between">
+            <video class="max-w-8xl h-auto z-10" autoplay muted loop playsinline>
                 <source src="logomove.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -47,12 +46,12 @@ import ImgToggle from "../components/ImgToggle.astro"
                 </div>
             </div>
         </section>
-  </section>
-<section>
+      </section>
+     <section>
     <h3 class="rounded-50 bg-white text-medium text-blue-500 p-xs font-cooper font-semibold">How it works</h3>
     <div class="bg-blue-500 rounded-50 lg:flex flex-row py-xs">
         <img class="w-[900px] pl-xs" src="/infographic.png" alt="info graphic">
-        <img class="hidden lg:block rotate-90  w-1/3" src="/logo_white.svg" alt="Bællevin logo">
+        <img class="hidden xl:block rotate-90  w-1/3" src="/logo_white.svg" alt="Bællevin logo">
     </div>
 </section>
 </article>
