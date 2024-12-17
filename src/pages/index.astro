@@ -3,6 +3,11 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
 import { Image } from 'astro:assets';
 import Abbar from "../components/Abbar.astro";
+import placeholder from "../assets/images/placeholder.webp"
+import store from "../assets/images/store.webp"
+import visit2 from "../assets/images/visit2.webp"
+import wineclubs from "../assets/images/wineclubs.webp"
+import whatis from "../assets/images/whatis.webp"
 ---
 
 <MainLayout title="Bællevin">
@@ -26,16 +31,12 @@ import Abbar from "../components/Abbar.astro";
 	<section id="intro" class="h-screen bg-black">
 		<div class="grid grid-cols-2 h-full">
 		
-		  <img src="placeholder.webp" alt="" class="h-full object-cover border-0 rounded-[50px]" />
-	  
-		 
+		  <!-- <img src="placeholder.webp" alt="" class="h-full object-cover border-0 rounded-[50px]" /> -->
+		   <Image src={placeholder} alt="placeholdert img" class="h-full object-cover border-0 rounded-[50px]" />
 		  <div class="h-full flex flex-col">
-			
-			<h1 class="bg-white border-0 rounded-[50px] text-large font-extralight text-blue-500 w-full py-3 px-[27px]">
+			<h1 class="bg-white border-0 rounded-[50px] text-large font-extralight text-blue-500 w-full py-3 px-[27px] h-[120px] flex items-center">
 			  Support your local winedealer
 			</h1>
-	  
-			
 			<div class="bg-white border-0 rounded-[50px] flex-grow flex flex-col justify-between">
 			
 			  <div class="grid grid-cols-2 gap-2 pt-5">
@@ -48,11 +49,10 @@ import Abbar from "../components/Abbar.astro";
 				  Welcome to Bællevin, your local source for the finest natural wines. Whether you're a seasoned connoisseur or a curious beginner, we're here to connect you with unique, responsibly produced wines.
 				</p>
 			  </div>
-	  
-		
+
 			  <div class="flex justify-center mb-6 gap-0">
-				<Button variant="primary" size="medium">Visit us</Button>
-				<Button variant="primary" size="medium">wine</Button>
+				<Button variant="primary" size="medium" href="#visit">Visit us</Button>
+				<Button variant="primary" size="medium" href="#join">Join the club</Button>
 			  </div>
 			</div>
 		  </div>
@@ -61,66 +61,101 @@ import Abbar from "../components/Abbar.astro";
 	  
 
 	<section id="storeimage" class="h-screen">
-		<img src="placeholder.webp" alt="full screen image of store" class="border-0 rounded-50 h-screen object-cover ">
+		<!-- <img src="store.webp" alt="full screen image of store" class="border-0 rounded-50 h-screen object-cover "> -->
+		 <Image src={store} alt="storeimage" class="border-0 rounded-50 h-screen object-cover "/>
 	</section>
 
-	<section id="visit" class="h-screen">
-	
-		<div class="grid grid-cols-2">
-			
-			<div>
-				<h1 class="bg-white ">Visit us</h1>
-				<div class="grid grid-cols-2 bg-white">
-						<p>Visit our cozy store</p>
-					<div class="border-b border-black pl-4"></div>
-					<h2>Valby Langgade 52</h2>
-		
-					<p>Come explore our selection of natural wines in person at our cozy shop in the heart of Valby. Whether you’re looking for something special or just want to chat about wine, our friendly staff is here to help you discover your next favorite bottle. We are located at Valby Langgade 52, just a short walk from the Valby train station. Stop by and experience the world of natural wines firsthand!</p>
-		
-				
-				<div class="flex flex-row">
-					<Button></Button>
-					<Button></Button>
+	<section id="visit" class="h-screen bg-black">
+		<div class="grid grid-cols-2 h-full">
+		  <div class="h-full flex flex-col">
+			<!-- Center text vertically, but left-align horizontally -->
+			<h1 class="bg-white border-0 rounded-[50px] text-large font-extralight text-blue-500 w-full py-3 px-[27px] h-[120px] flex items-center">
+			  Visit us
+			</h1>
+			<div class="bg-white border-0 rounded-[50px] flex-grow flex flex-col justify-between">
+			  
+			  <div class="grid grid-cols-2 gap-2 pt-5">
+				<div class="px-6">
+				  <p class="text-base font-display">Visit our cozy store</p>
+				  <div class="border-b border-black-500 w-72 my-2"></div>
+				  <h2 class="text-medium font-extralight -my-5 ">Valby Langgade 52</h2>
 				</div>
+				<p class="text-base font-display px-5">
+				  Come explore our selection of natural wines in person at our cozy shop in the heart of Valby. Whether you're looking for something special or just want to chat about wine, our friendly staff is here to help you discover your next favorite bottle. We are located at Valby Langgade 52, just a short walk from the Valby train station. Stop by and experience the world of natural wines firsthand!
+				</p>
+			  </div>
+	  
+			  <div class="flex justify-center mb-6 gap-0">
+				<Button variant="primary" size="medium" target="_blank" href="https://www.google.com/maps/place/Valby+Langgade+52,+2500+K%C3%B8benhavn/@55.6666341,12.5131247,16z/data=!3m1!4b1!4m6!3m5!1s0x46525392c7424e63:0xa8dfaf549b026c09!8m2!3d55.6666341!4d12.515705!16s%2Fg%2F11b8v7gxbg?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D">Directions</Button>
+				<Button variant="primary" size="medium" href="#footer">Opening hours</Button>
+			  </div>
 			</div>
-			</div>
-			<img src="placeholder.webp" alt="" class="h-screen object-cover border-0 rounded-50">
+		  </div>
+	  
+		  <!-- <img src="visit2.webp" alt="" class="h-screen object-cover border-0 rounded-50"> -->
+		   <Image src={visit2} alt="visitimg" class="h-screen object-cover border-0 rounded-50"/>
 		</div>
-	</section>
-
-	<section id="join" class="h-screen">
-	
-		<div class="grid grid-cols-2">
-			<img src="placeholder.webp" alt="" class="h-screen object-cover border-0 rounded-50">
-	
-			<div>
-				<h1 class="bg-white">Join the wineclub</h1>
-				<div class="grid grid-cols-2 bg-white">
-					<p>Wine bundles from</p>
-					<div class="border-b border-black pl-4"></div>
-					<h2>300DKK</h2>
-					<p>If choosing your wines feels difficult and boring, or if you lack the time and energy to place an order, you should sign up for a wine subscription here on the website and let wine enthusiasts do the work for you!</p>
-				
-					<Button variant="primary" size="large">Visit us</Button>
-				</div>
-			</div>
-			</div>
-	</section>
-
-	<section id="What is Natural Wine, Anyway?" class="h-screen">
-	
-		<div class="grid grid-cols-2 ">
+	  </section>
 			
-			<div>
-				<h1 class="bg-white">Visit us</h1>
-				<div class="grid grid-cols-2 bg-white">
-					<p>Natural wine is made from organically farmed grapes, with no additives or artificial interventions. No added sugars, acids, or preservatives—just pure, unfiltered wine that highlights the true flavors of the grapes and the land. It's a healthier, more sustainable choice that offers an authentic, unique wine experience.</p>
-					<img src="" alt="svg av vinflaska?" class="">
-				
-					<Button></Button>
+
+
+	
+	<section id="join" class="h-screen bg-black">
+		<div class="grid grid-cols-2 h-full">
+		
+		  <!-- <img src="wineclubs.webp" alt="" class="h-full object-cover border-0 rounded-[50px]" /> -->
+		   <Image src={wineclubs} alt="wine club img" class="h-full object-cover border-0 rounded-[50px]"/>
+		  <div class="h-full flex flex-col">
+			<h1 class="bg-white border-0 rounded-[50px] text-large font-extralight text-blue-500 w-full py-3 px-[27px] h-[120px] flex items-center">
+			Join the wineclub
+			</h1>
+			<div class="bg-white border-0 rounded-[50px] flex-grow flex flex-col justify-between">
+			
+			  <div class="grid grid-cols-2 gap-2 pt-5">
+				<div class="px-6">
+				  <p class="text-base font-display">Wine bundles from</p>
+				  <div class="border-b border-black-500 w-72 my-2"></div>
+				  <h2 class="text-medium font-extralight -my-5">300DKK</h2>
 				</div>
+				<p class="text-base font-display px-5">
+				If choosing your wines feels difficult and boring, or if you lack the time and energy to place an order, you should sign up for a wine subscription here on the website and let wine enthusiasts do the work for you!
+				</p>
+			  </div>
+
+			  <div class="flex justify-center mb-6 gap-0">
+				<Button variant="primary" size="large" href="/club">Join the club</Button>
+			  </div>
 			</div>
-			<img src="placeholder.webp" alt="" class="h-screen object-cover border-0 rounded-50">
+		  </div>
+		</div>
+	  </section>
+
+	  <section id="whatis" class="h-screen bg-black">
+	
+		<div class="grid grid-cols-2 h-full">
+			
+			<div class="h-full flex flex-col">
+				<h1 class="bg-white border-0 rounded-[50px] text-large font-extralight text-blue-500 w-full py-3 px-[27px] h-[120px] flex items-center">
+				What is Natural Wine, Anyway?
+				</h1>
+				<div class="bg-white border-0 rounded-[50px] flex-grow flex flex-col justify-between">
+				
+				  <div class="grid grid-cols-2 gap-2 pt-5">
+					<p class="text-base font-display px-5">
+						Welcome to Bællevin, your local source for the finest natural wines. Whether you're a seasoned connoisseur or a curious beginner, we're here to connect you with unique, responsibly produced wines.
+					  </p>
+						<div class="px-6">
+							<img src="/vinglas.svg" alt="" class="w-60">
+						</div>
+				  </div>
+	
+				  <div class="flex justify-center mb-6 gap-0">
+					<Button variant="primary" size="large" target="_blank" href="https://www.instagram.com/p/DC68YMmMTWd/">Learn more</Button>
+				  </div>
+				</div>
+			  </div>
+			<!-- <img src="whatis.webp" alt="" class="h-screen object-cover border-0 rounded-50"> -->
+			 <Image src={whatis} alt="what is natural wine" class="h-screen object-cover border-0 rounded-50"/>
 		</div>
 	</section>
 </MainLayout>

@@ -1,0 +1,20 @@
+---
+const { src, alt, value } = Astro.props;
+---
+
+<label class="cursor-pointer inline-block">
+  <input
+    type="checkbox"
+    value={value}
+    class="sr-only peer"
+  />
+  <div
+    class="
+      relative w-[70px] lg:w-[110px] rounded-34 border border-transparent
+      peer-checked:border-black-500 peer-checked:shadow-inner-50
+      transition ease-in-out hover:border-black-500
+    "
+  >
+    <img src={src} alt={alt} class="w-full h-full object-cover rounded-34" />
+  </div>
+</label>
