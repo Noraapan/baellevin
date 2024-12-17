@@ -81,7 +81,7 @@ export default {
         small: ["20px", { lineHeight: "auto", letterSpacing: "1px" }],
         base: ["26px", { lineHeight: "29px", letterSpacing: "0px" }],
         bread: ["22px", { lineHeight: "auto", letterSpacing: "0px" }],
-        medium: ["70px", { lineHeight: "auto" }],
+        medium: ["70px", { lineHeight: "55px" }],
         large: ["65px", { lineHeight: "50px" }],
         tiny: ["12px", { lineHeight: "auto", letterSpacing: "1px" }],
         slogan: ["35px", { lineHeight: "33px", letterSpacing: "-6px" }],
