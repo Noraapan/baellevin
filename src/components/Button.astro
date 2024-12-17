@@ -3,13 +3,13 @@ const { variant = "primary", size = "medium", href } = Astro.props;
 
 const buttonStyling = "font-display text-base text-black-500 hover:bg-blue-500 rounded-34 hover:text-white hover:shadow-none active:shadow-inner-50 transition ease-in-out shadow-drop-50 border border-black-500";
 const variantClasses = {
-    primary: "w-full sm:w-[354px] h-[104px] px-[52px] py-[12px] flex items-center justify-center",
+    primary: "",
     secondary: "", 
 };
 const sizeClasses = {
-  large: "",
-  medium: "",
-  small: "",
+  large: "w-full sm:w-[354px] lg:w-[719px] h-[104px] px-[52px] py-[12px] flex items-center justify-center",
+  medium: "w-full sm:w-[354px] h-[104px] px-[52px] py-[12px] flex items-center justify-center",
+  small: "w-full sm:w-[129px] h-[129px] px-[52px] py-[12px] flex items-center justify-center",
 };
 ---
 

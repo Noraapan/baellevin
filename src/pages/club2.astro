@@ -4,8 +4,12 @@ import Button from "../components/Button.astro";
 import Header from "../components/Header.astro";
 import '../styles/tailwind.css';
 import 'animate.css';
+import Radio from "../components/Radio.astro";
 const { title } = Astro.props;
 import MainLayout from "../layouts/MainLayout.astro";
+
+
+
 ---
 <MainLayout title="Bællevin">
 <section class="bg-white rounded-34">
@@ -24,12 +28,12 @@ import MainLayout from "../layouts/MainLayout.astro";
 </section>
 <section class="bg-white rounded-34 h-screen pt-s">
      <p class="pl-lg -mb-m">Bottles</p>
-    <div class="flex flex-row justify-center space-x-s py-m">
-       
-<div class=""><Button>3</Button></div>
-<div class=""><Button>6</Button></div>
-<div class=""><Button>9</Button></div>
-    </div>
+
+    <div class="flex flex-row justify-center space-x-sm py-m">
+        <Radio value="3" name="bottles">3</Radio>
+        <Radio value="6" name="bottles">6</Radio>
+        <Radio value="12" name="bottles">12</Radio>
+      </div>
     <div class="flex justify-center">
         <Button variant="primary" size="medium" href="/club3">Next</Button>
     </div>
