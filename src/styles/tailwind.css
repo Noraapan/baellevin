@@ -21,6 +21,18 @@
     @apply text-white;
     @apply bg-black-500;
   }
+
+/* ny test */
+body, .scroll-container {
+  scroll-snap-type: y mandatory; /* Enable scroll snapping vertically */
+  overflow-y: scroll; /* Enable vertical scroll */
+  height: 100vh; /* Ensure full height for the scroll container */
+}
+
+section {
+  scroll-snap-align: start; /* Snap each section to the top */
+}
+
   .display {
     @apply font-cooper;
   }
@@ -35,4 +47,5 @@
   h1, h2, h3, h4, p, a{
     @apply text-black-500;
   }
+
 }
