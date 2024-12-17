@@ -6,6 +6,7 @@ import '../styles/tailwind.css';
 import 'animate.css';
 const { title } = Astro.props;
 import MainLayout from "../layouts/MainLayout.astro";
+import Radio from "../components/Radio.astro";
 ---
 <MainLayout title="Bællevin">
 <section class="bg-white rounded-34">
@@ -26,12 +27,12 @@ import MainLayout from "../layouts/MainLayout.astro";
 <section class="bg-white rounded-34 h-screen pt-s">
     <!--Gifen ska med men ska den va background måske?? -->
     <p class="pl-lg -mb-m">Weeks</p>
-    <div class="flex flex-row justify-center space-x-s py-m">
-<Button>2</Button>
-<Button>4</Button>
-<Button>8</Button>
-<Button>Seasonal</Button> <!--what is seasonal info-knapp?????-->
-    </div>
+    <div class="flex flex-row justify-center space-x-sm py-m">
+        <Radio value="2" name="bottles">2</Radio>
+        <Radio value="4" name="bottles">4</Radio>
+        <Radio value="8" name="bottles">8</Radio>
+        <Radio value="mix" name="bottles">Seasonal</Radio>
+      </div>
     <div class="flex justify-center">
         <Button variant="primary" size="medium" href="/checkout">Check out</Button>
     </div>
