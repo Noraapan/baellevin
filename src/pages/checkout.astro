@@ -2,7 +2,6 @@
 import Abbar from "../components/Abbar.astro";
 import Accordion from "../components/Accordion.astro";
 import Button from "../components/Button.astro";
-import Header from "../components/Header.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import '../styles/tailwind.css';
 import 'animate.css';
@@ -59,9 +58,11 @@ const { title } = Astro.props;
         </section>
         <section class="text-black-500 flex flex-col gap-4 border-b border-black-500">
             <h3 class="text-blue-500 mt-m text-slogan lg:text-large pl-xxs tracking-tighter font-light font-cooper">Payment options</h3>
-            debit card
-            PayPal
-            mobilepay
+         <div class="max-w-xl md:max-w-4xl mx-auto  px-4 md:px-0">
+				<Accordion class="border-b border-black-500" caption="Debit card" image="" bio=""></Accordion>
+				<Accordion class="border-b border-black-500" caption="Uforglemmeligt højskoleophold i udlandet" image="bloon.webp" bio="HÖJSKOLENDK tilbyder alverdens skønne rejser og ophold og du kan både komme på højskoleophold i udlandet i løbet af året eller på højskole i udlandet i sommerferien. Begge muligheder er enormt populære blandt vores skønne højskoleelever. Højskoleophold i sommerferien er typisk kortere og varer ca. 5 uger. På de højskole rejser oplever du flere lande og forskellige kulturer og traditioner, langt fra det danske vi kender. Det er et oplagt eventyr til dig, der gerne vil ud og rejse, møde andre unge mennesker og udvikle dig som menneske i løbet af din sommerferie, inden du fx starter på nyt studie eller job. Vores højskoleophold i løbet af året varer mellem 2-3 måneder. De rejser er oplagt for dig, der holder sabbatår og gerne vil ud og opleve verdenen hvor du udvikler dig selv på et personligt plan. Tag på højskole i udlandet med andre og få en uforglemmelig oplevelse. Vi tør godt love dig, at det bliver dit livs eventyr!"></Accordion>
+				<Accordion class="border-b border-black-500" caption="En rejse højskole fyldt med oplevelser" image="ink.webp" bio="Drømmer du om at rejse på højskole i udlandet? Med HÖJSKOLENDK tilbyder vi de mest attraktive højskoleophold i udlandet, hvor du besøger skønne og spændende lande, deltager i inspirerende undervisning og fede aktiviteter. Du rejser med andre unge voksne og danske rejseledere, og får oplevelser for livet. Vores højskoleophold byder på teambuilding, hvor du udvikler dig personligt og lærer om samarbejde og fællesskab, frivilligt arbejde, hvor du kommer tæt på lokale kulturer, og spændende friuger, hvor du selv kan udforske verden. Oplev vilde naturoplevelser som trekking i Himalaya, snorkling i Caribien, safari i Sri Lanka eller surf på Hawaii. Mød autentiske kulturer, se te-plantager i Sri Lanka, hindu-templer i Indien eller Inka-ruiner i Mexico. HÖJSKOLENDK sikrer dig eventyr, fællesskab og personlig udvikling, så du vender hjem stærkere, mere selvsikker og med minder for livet. Vælg dit næste højskoleeventyr i verdenen med os."></Accordion>
+		</div>
         <Accordion>Debit card</Accordion>
         <Accordion>PayPal</Accordion>
         <Accordion>MobilePay</Accordion>
