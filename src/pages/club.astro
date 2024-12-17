@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
+import ImgToggle from "../components/ImgToggle.astro"
 ---
 <MainLayout title="Bællevin">
 <article>
@@ -17,11 +18,11 @@ import Button from '../components/Button.astro';
             <div class="py-s rounded-50 w-full bg-white grid max-w-[900px]">
                 <p class="md:text-base font-display text-center">Select your wine preference or choose "all kinds" and let our wine enthusiasts do it for you.</p>
                 <div class="py-s flex flex-row space-x-s justify-end pr-s lg:pr-4xl lg:space-x-m">
-                    <img class="hover:border hover:rounded-34 border-black-500 w-[70px] lg:w-[110px]" src="/red.svg" alt="red wine">
-                    <img class="hover:border hover:rounded-34 border-black-500 w-[70px] lg:w-[110px]" src="/white.svg" alt="white wine">
-                    <img class="hover:border hover:rounded-34 border-black-500 w-[70px] lg:w-[110px]" src="/orange.svg" alt="orange wine">
-                    <img class="hover:border hover:rounded-34 border-black-500 w-[70px] lg:w-[110px]" src="/all.svg" alt="all kinds of wine">
-                </div>
+                    <ImgToggle src="/red.svg" alt="Red Wine" value="red" />
+                    <ImgToggle src="/white.svg" alt="White Wine" value="white" />
+                    <ImgToggle src="/orange.svg" alt="Orange Wine" value="orange" />
+                    <ImgToggle src="/all.svg" alt="All Wines" value="all" />
+                  </div>
                 <div class="flex justify-end pr-xs lg:pr-4xl">
                     <Button class="flex justify-end" variant="primary" size="medium" href="/club2">Next</Button>
                 </div>

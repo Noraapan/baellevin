@@ -1,5 +1,5 @@
 ---
-const { variant = "primary", size = "medium", href } = Astro.props;
+const { variant = "primary", size = "medium", href, target } = Astro.props;
 
 const buttonStyling = "font-display text-base text-black-500 hover:bg-blue-500 rounded-34 hover:text-white hover:shadow-none active:shadow-inner-50 transition ease-in-out shadow-drop-50 border border-black-500";
 const variantClasses = {
@@ -16,7 +16,12 @@ const sizeClasses = {
 <div>
     {
       href ? (
-        <a href={href} class:list={[buttonStyling, variantClasses[variant], sizeClasses[size], "group"]}>
+        <a 
+          href={href} 
+          target={target} 
+          rel={target === "_blank" ? "noopener noreferrer" : undefined} 
+          class:list={[buttonStyling, variantClasses[variant], sizeClasses[size], "group"]}
+        >
           <slot />
           <svg class="ml-[22px] w-6 h-6 text-black-500 group-hover:text-white transition-colors duration-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
