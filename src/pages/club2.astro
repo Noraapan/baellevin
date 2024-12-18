@@ -26,15 +26,15 @@ import MainLayout from "../layouts/MainLayout.astro";
     <h3 class="text-blue-500 pl-xxs md:pl-2xl lg:pl-6xl mt-m text-slogan lg:text-large tracking-tighter font-light font-cooper">Choose number of bottles</h3>
     <p class="py-xs pl-xxs md:pl-2xl lg:pl-6xl text-tiny font-display text-black-500 lg:text-base">Select the number of wines you would like to recieve.</p>
 </section>
-<section class="bg-white rounded-34 h-screen pt-s">
+<section class="bg-white rounded-34 h-screen pt-s ">
      <p class="text-tiny font-display pl-lg -mb-m">Bottles</p>
 
-    <div class="flex flex-row justify-center space-x-sm py-m">
+    <div class="flex flex-row justify-center space-x-sm py-m animate__animated animate__fadeIn">
         <Radio value="3" name="bottles">3</Radio>
         <Radio value="6" name="bottles">6</Radio>
         <Radio value="12" name="bottles">12</Radio>
       </div>
-    <div class="flex justify-center">
+    <div class="flex justify-center animate__animated animate__fadeIn">
         <Button variant="primary" size="medium" href="/club3">Next</Button>
     </div>
     <img class="mt-xxs md:-mt-2xl ml-s w-6xl lg:w-8xl h-auto" src="/gubbe1.png" alt="wine guy">

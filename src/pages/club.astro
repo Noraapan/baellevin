@@ -15,11 +15,11 @@ import ImgToggle from "../components/ImgToggle.astro"
                 <source src="logomove.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <div class="py-s rounded-50 w-full bg-white grid max-w-[900px]">
+            <div class="py-s rounded-50 w-full bg-white grid max-w-[900px] animate__animated animate__backInRight">
                 <p class="text-tiny md:text-base font-display text-center">
                     Select your wine preference or choose "all kinds" and let our wine enthusiasts do it for you.
                 </p>
-                <div class="py-s flex flex-row space-x-s justify-end pr-s lg:pr-4xl lg:space-x-m">
+                <div class="py-s flex flex-row space-x-s justify-end pr-s lg:pr-4xl lg:space-x-m ">
                     <ImgToggle src="/red.svg" alt="Red Wine" value="red" />
                     <ImgToggle src="/white.svg" alt="White Wine" value="white" />
                     <ImgToggle src="/orange.svg" alt="Orange Wine" value="orange" />
@@ -48,10 +48,10 @@ import ImgToggle from "../components/ImgToggle.astro"
             </div>
         </section>
       </section>
-     <section>
-    <h3 class="inviewreturn rounded-50 bg-white text-medium text-blue-500 p-xs text-slogan lg:text-large tracking-tighter font-light font-cooper">How it works</h3>
-    <div class="bg-blue-500 rounded-50 lg:flex flex-row py-xs justify-center items-center">
-        <img class="w-[900px] pl-xs" src="/infographic.png" alt="info graphic">
+     <section class="">
+    <h3 class="rounded-50 bg-white text-medium text-blue-500 p-xs text-slogan lg:text-large tracking-tighter font-light font-cooper ">How it works</h3>
+    <div class="bg-blue-500 rounded-50 lg:flex flex-row py-xs justify-center items-center ">
+        <img class="w-[900px] pl-xs blink" src="/infographic.png" alt="info graphic">
         <img class="hidden xl:block  max-w-96" src="/logo_white2.svg" alt="Bællevin logo">
     </div>
 </section>
@@ -77,4 +77,16 @@ import ImgToggle from "../components/ImgToggle.astro"
     );
   };
 });
+</script>
+
+<script>
+
+	import { inView } from "motion";
+	const inviewelement20 = document.querySelector(".blink");
+	inView(
+		inviewelement20, () => {
+			inviewelement20.classList.add("blink-1")
+		}
+	)
+
 </script>

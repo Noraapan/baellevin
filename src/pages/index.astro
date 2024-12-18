@@ -144,7 +144,7 @@ import logo from "../assets/images/logo_white.svg"
 				</p>
 			  </div>
 
-			  <div class="flex justify-center mb-14">
+			  <div class="flex justify-center mb-14 blink">
 				<Button variant="primary" size="large" href="/club">Join the club</Button>
 			  </div>
 			</div>
@@ -224,3 +224,14 @@ import logo from "../assets/images/logo_white.svg"
 
 
 
+<script>
+
+	import { inView } from "motion";
+	const inviewelement20 = document.querySelector(".blink");
+	inView(
+		inviewelement20, () => {
+			inviewelement20.classList.add("blink-1")
+		}
+	)
+
+</script>

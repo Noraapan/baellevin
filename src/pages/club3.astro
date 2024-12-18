@@ -27,13 +27,13 @@ import Radio from "../components/Radio.astro";
 <section class="bg-white rounded-34 h-screen pt-s">
     <!--Gifen ska med men ska den va background måske?? -->
     <p class="text-tiny font-display pl-lg -mb-m">Weeks</p>
-    <div class="flex flex-row justify-center space-x-xxs md:space-x-sm py-m">
+    <div class="flex flex-row justify-center space-x-xxs md:space-x-sm py-m animate__animated animate__fadeIn">
         <Radio value="2" name="bottles">2</Radio>
         <Radio value="4" name="bottles">4</Radio>
         <Radio value="8" name="bottles">8</Radio>
         
 
-        <div class="relative flex items-center space-x-2">
+        <div class="relative flex items-center space-x-2 animate__animated animate__fadeIn">
             <Radio value="mix" name="bottles">Seasonal</Radio>
 
             
@@ -52,7 +52,7 @@ import Radio from "../components/Radio.astro";
         </div>
     </div>
 
-    <div class="flex justify-center">
+    <div class="flex justify-center animate__animated animate__fadeIn">
         <Button variant="primary" size="medium" href="/checkout">Check out</Button>
     </div>
     <img class="mt-xxs md:-mt-5xl ml-s w-6xl lg:w-8xl h-auto" src="/gubbe2.png" alt="wine guy">
