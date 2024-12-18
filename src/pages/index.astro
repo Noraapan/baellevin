@@ -72,8 +72,9 @@ import logo from "../assets/images/logo_white.svg"
 
 
 	<section class="parallaxgrafik fullwidthsection">	
-		<div class="bg-teal-100 h-screen w-full bg-cover bg-center grid grid-cols-12 overflow-hidden" style="background-image: url('/store.webp');">
-			<Image src={logo} alt="" class="col-start-2 parallaxgrafik1"></Image>
+		<div class="bg-teal-100 h-screen w-full bg-cover bg-center grid grid-cols-12 overflow-hidden rounded-50" style="background-image: url('/store.webp');">
+			<!-- <Image src={logo} alt="" class="col-start-2 col-span-4 parallaxgrafik1"></Image> -->
+			 
 		</div>
 	</section>
 
@@ -179,11 +180,12 @@ import logo from "../assets/images/logo_white.svg"
 
 
 <script>
-
-	import { scroll } from "motion";
-	import { animate } from "motion";
-
-		scroll(animate(".parallaxgrafik1", { y: [400, -600] }), {
+	import { animate, scroll } from 'motion';
+scroll(animate(".parallaxgrafik1", { y: [1000, -600],
+	x:[-200, 500] }
+), {
 		target: document.querySelector(".parallaxgrafik"), offset: ["start end", "end start"]
 	});
+
+
 </script>
