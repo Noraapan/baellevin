@@ -27,7 +27,7 @@ import Radio from "../components/Radio.astro";
 <section class="bg-white rounded-34 h-screen pt-s">
     <!--Gifen ska med men ska den va background måske?? -->
     <p class="text-tiny font-display pl-lg -mb-m">Weeks</p>
-    <div class="flex flex-row justify-center space-x-sm py-m">
+    <div class="flex flex-row justify-center space-x-xxs md:space-x-sm py-m">
         <Radio value="2" name="bottles">2</Radio>
         <Radio value="4" name="bottles">4</Radio>
         <Radio value="8" name="bottles">8</Radio>
@@ -37,7 +37,7 @@ import Radio from "../components/Radio.astro";
             <Radio value="mix" name="bottles">Seasonal</Radio>
 
             
-            <div class="relative group cursor-pointer">
+            <div class="relative group cursor-pointer hidden lg:block">
                
                 <div
                     class="flex items-center justify-center w-6 h-6 bg-gray-300 text-black rounded-full text-xs font-bold z-20">
