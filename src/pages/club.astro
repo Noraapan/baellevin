@@ -41,13 +41,13 @@ import ImgToggle from "../components/ImgToggle.astro"
                 </div>
         
                 <div class="flex justify-end pr-xs lg:pr-4xl">
-                    <Button class="flex justify-end" variant="primary" size="medium" href="/club2">Next</Button>
+                    <Button id="" class="flex justify-end" variant="primary" size="medium" href="/club2">Next</Button>
                 </div>
             </div>
         </section>
       </section>
      <section>
-    <h3 class="rounded-50 bg-white text-medium text-blue-500 p-xs text-slogan lg:text-large tracking-tighter font-light font-cooper">How it works</h3>
+    <h3 class="inviewreturn rounded-50 bg-white text-medium text-blue-500 p-xs text-slogan lg:text-large tracking-tighter font-light font-cooper">How it works</h3>
     <div class="bg-blue-500 rounded-50 lg:flex flex-row py-xs justify-center items-center">
         <img class="w-[900px] pl-xs" src="/infographic.png" alt="info graphic">
         <img class="hidden xl:block  max-w-96" src="/logo_white2.svg" alt="Bællevin logo">
@@ -55,3 +55,22 @@ import ImgToggle from "../components/ImgToggle.astro"
 </section>
 </article>
 </MainLayout>
+<script>
+    import { inView } from "motion";
+    import { animate } from "motion";
+
+    inView(".inviewreturn", ({ target }) => {
+  animate(
+    target,
+    { opacity: [0, 1], y: [200, 0] },
+    { duration: 1.5 }
+  );
+
+  return () => {
+    animate(
+      target,
+      { opacity: 0, y: 200 }
+    );
+  };
+});
+</script>
