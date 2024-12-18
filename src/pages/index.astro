@@ -8,6 +8,7 @@ import store from "../assets/images/store.webp"
 import visit2 from "../assets/images/visit2.webp"
 import wineclubs from "../assets/images/wineclubs.webp"
 import whatis from "../assets/images/whatis.webp"
+import logo from "../assets/images/logo_white.svg"
 ---
 
 
@@ -64,10 +65,18 @@ import whatis from "../assets/images/whatis.webp"
 	  
 	  
 
-	<section id="storeimage" class="">
+	<!-- <section id="storeimage" class="">
 
 		 <Image src={store} alt="storeimage" class="border-0 rounded-50 h-screen object-cover "/>
+	</section> -->
+
+
+	<section class="parallaxgrafik fullwidthsection">	
+		<div class="bg-teal-100 h-screen w-full bg-cover bg-center grid grid-cols-12 overflow-hidden" style="background-image: url('/store.webp');">
+			<Image src={logo} alt="" class="col-start-2 parallaxgrafik1"></Image>
+		</div>
 	</section>
+
 
 	<section id="visit" class="lg:h-screen bg-black">
 		<div class="lg:grid grid-cols-2 h-full">
@@ -167,3 +176,14 @@ import whatis from "../assets/images/whatis.webp"
 
 </MainLayout>
 </div>
+
+
+<script>
+
+	import { scroll } from "motion";
+	import { animate } from "motion";
+
+		scroll(animate(".parallaxgrafik1", { y: [400, -600] }), {
+		target: document.querySelector(".parallaxgrafik"), offset: ["start end", "end start"]
+	});
+</script>
