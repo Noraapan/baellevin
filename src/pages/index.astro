@@ -37,7 +37,7 @@ import logo from "../assets/images/logo_white.svg"
 
 	  <section id="intro" class="lg:h-screen bg-black">
 		<div class="lg:grid grid-cols-2 h-full">
-		  <Image src={placeholder} alt="placeholdert img" class=" lg:h-full object-cover border-0 rounded-[50px]" />
+		  <Image src={placeholder} alt="placeholdert img" class="inviewreturn lg:h-full object-cover border-0 rounded-[50px]" />
 		  <div class="h-full flex flex-col">
 			<h1 class="bg-white border-0 rounded-[50px] text-4xl md:text-large font-extralight text-blue-500 w-full py-3 px-[27px] h-[120px] flex items-center">
 			  Support your local winedealer
@@ -70,13 +70,20 @@ import logo from "../assets/images/logo_white.svg"
 		 <Image src={store} alt="storeimage" class="border-0 rounded-50 h-screen object-cover "/>
 	</section> -->
 
+<!-- 
 
 	<section class="parallaxgrafik fullwidthsection">	
-		<div class="bg-teal-100 h-screen w-full bg-cover bg-center grid grid-cols-12 overflow-hidden rounded-50" style="background-image: url('/store.webp');">
-			<!-- <Image src={logo} alt="" class="col-start-2 col-span-4 parallaxgrafik1"></Image> -->
-			 
+		<div class="bg-teal-100 h-screen w-full bg-cover bg-center grid grid-cols-12 overflow-hidden rounded-50" style="background-image: url('store.webp');">
+			 <img src="logo_white.svg" alt="" class="col-start-2 col-span-10 parallaxgrafik1">
+		</div>
+	</section> -->
+
+	<section class="parallaxgrafik fullwidthsection">	
+		<div class="bg-teal-100 h-screen w-full bg-cover bg-center grid grid-cols-12 overflow-hidden rounded-50" style="background-image: url('store.webp');">
+			 <img src="logo_white.svg" alt="" class="col-start-2 col-span-10 parallaxgrafik1">
 		</div>
 	</section>
+
 
 
 	<section id="visit" class="lg:h-screen bg-black">
@@ -119,7 +126,7 @@ import logo from "../assets/images/logo_white.svg"
 		<div class="lg:grid grid-cols-2 h-full">
 		
 
-		   <Image src={wineclubs} alt="wine club img" class="lg:h-full object-cover border-0 rounded-[50px] order-last"/>
+		   <Image src={wineclubs} alt="wine club img" class="inviewreturn lg:h-full object-cover border-0 rounded-[50px] order-last "/>
 		  <div class="h-full flex flex-col">
 			<h1 class="bg-white border-0 rounded-[50px] text-4xl md:text-large font-extralight text-blue-500 w-full py-3 px-[27px] h-[120px] flex items-center">
 			Join the wineclub
@@ -148,7 +155,7 @@ import logo from "../assets/images/logo_white.svg"
 	  <section id="whatis" class="lg:h-screen bg-black">
 	
 		<div class="lg:grid grid-cols-2 h-full">
-			<Image src={whatis} alt="what is natural wine" class="lg:h-screen object-cover border-0 rounded-50"/>
+			<Image src={whatis} alt="what is natural wine" class="inviewreturn lg:h-screen object-cover border-0 rounded-50"/>
 			
 			<div class="h-full flex flex-col">
 				<h1 class="bg-white border-0 rounded-[50px] text-4xl md:text-large font-extralight text-blue-500 w-full py-3 px-[27px] h-[120px] flex items-center">
@@ -181,14 +188,20 @@ import logo from "../assets/images/logo_white.svg"
 
 <script>
 	import { animate, scroll } from 'motion';
-scroll(animate(".parallaxgrafik1", { y: [1000, -600],
-	x:[-200, 500] }
-), {
-		target: document.querySelector(".parallaxgrafik"), offset: ["start end", "end start"]
-	});
 
-
+	scroll(
+    animate(".parallaxgrafik1", { 
+        y: ["100%", "-100%"]  
+    }),
+    {
+        container: document.querySelector(".md\\:scroll-container"), 
+        target: document.querySelector(".parallaxgrafik"),
+        offset: ["start end", "end start"],
+    }
+);
 </script>
+
+
 <script>
     import { inView } from "motion";
     import { animate } from "motion";
@@ -196,15 +209,18 @@ scroll(animate(".parallaxgrafik1", { y: [1000, -600],
     inView(".inviewreturn", ({ target }) => {
   animate(
     target,
-    { opacity: [0, 1], y: [200, 0] },
+    { opacity: [0, 1], y: [40, 0] },
     { duration: 1.5 }
   );
 
   return () => {
     animate(
       target,
-      { opacity: 0, y: 100 }
+      { opacity: 0, y: 40 }
     );
   };
 });
 </script>
+
+
+
