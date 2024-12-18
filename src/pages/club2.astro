@@ -27,7 +27,9 @@ import MainLayout from "../layouts/MainLayout.astro";
     <p class="py-xs pl-xxs md:pl-2xl lg:pl-6xl text-tiny font-display text-black-500 lg:text-base">Select the number of wines you would like to recieve.</p>
 </section>
 <section class="bg-white rounded-34 h-screen pt-s ">
-     <p class="text-tiny font-display pl-lg -mb-m">Bottles</p>
+     <div class="grid grid-cols-12">
+        <p class="text-tiny font-display -mb-m col-start-4 text-right">Bottles</p>
+    </div>
 
     <div class="flex flex-row justify-center space-x-sm py-m animate__animated animate__fadeIn">
         <Radio value="3" name="bottles">3</Radio>
