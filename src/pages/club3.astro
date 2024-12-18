@@ -25,7 +25,9 @@ import Radio from "../components/Radio.astro";
 </section>
 
 <section class="bg-white rounded-34 h-screen pt-s">
-    <p class="text-tiny font-display text-center -ml-4xl">Weeks</p>
+    <div class="grid grid-cols-12">
+        <p class="text-tiny font-display -mb-m col-start-4 text-right">Weeks</p>
+    </div>
     <div class="flex flex-row justify-center space-x-xxs md:space-x-sm py-m animate__animated animate__fadeIn">
         <Radio value="2" name="bottles">2</Radio>
         <Radio value="4" name="bottles">4</Radio>
