@@ -15,20 +15,26 @@ import logo from "../assets/images/logo_white.svg"
 
 <div class="md:scroll-container">
 <MainLayout title="Bællevin">
-
-	  <script>
-	
-		  const correctPassword = "eksamen"; // Set your password
-		  let userPassword = prompt("Enter the password to access the website:");
-	
-		  if (userPassword === correctPassword) {
-			// Once the user enters the correct password, show the content
-			document.body.style.display = "block";
-		  } else {
-			// If the password is incorrect, show an error message
-			document.body.innerHTML = "<h1>Incorrect password!</h1>";
+	  
+	 <!-- chat gpts simpla lås -->
+	 <script>
+		const correctPassword = "eksamen"; // Set your password
+		let userPassword = "";
+	  
+		// Hide the body initially
+		document.body.style.display = "none";
+	  
+		// Loop until the correct password is entered
+		while (userPassword !== correctPassword) {
+		  userPassword = prompt("Enter the eksamen password to access the website:");
+	  
+		  if (userPassword !== correctPassword) {
+			alert("Incorrect password! Please try again.");
 		  }
-		
+		}
+	  
+		// Show content when the correct password is entered
+		document.body.style.display = "block";
 	  </script>
 
 	<section id="hero" class="bg-blue-500 h-screen relative" >
