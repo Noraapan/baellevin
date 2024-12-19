@@ -12,8 +12,24 @@ import logo from "../assets/images/logo_white.svg"
 ---
 
 
+
 <div class="md:scroll-container">
 <MainLayout title="Bællevin">
+
+	  <script>
+	
+		  const correctPassword = "eksamen"; // Set your password
+		  let userPassword = prompt("Enter the password to access the website:");
+	
+		  if (userPassword === correctPassword) {
+			// Once the user enters the correct password, show the content
+			document.body.style.display = "block";
+		  } else {
+			// If the password is incorrect, show an error message
+			document.body.innerHTML = "<h1>Incorrect password!</h1>";
+		  }
+		
+	  </script>
 
 	<section id="hero" class="bg-blue-500 h-screen relative" >
 	<div class="sticky top-[50px] h-[800px]">
@@ -54,12 +70,15 @@ import logo from "../assets/images/logo_white.svg"
 				</div>
 				<p class="xl:text-base font-display px-5 mt-4 mb-4 sm:mt-0 sm:mb-0">
 				  Welcome to Bællevin, your local source for the finest natural wines. Whether you're a seasoned connoisseur or a curious beginner, we're here to connect you with unique, responsibly produced wines.
-				</p>
+
+				  <br>
+				  <br>
+				  <span class="">Discover the Bællevin Wine Club </span> <br>Our wine club is a personalized subscription that brings handpicked natural wines to your door, tailored to your tastes and preferences.</p>
 			  </div>
 	  
 			  <div class="flex justify-center items-center md:flex-row flex-col mb-14 gap-2 md:gap-0">
 				<Button variant="primary" size="medium" href="#visit">Visit us</Button>
-				<Button variant="primary" size="medium" href="#join">Join the club</Button>
+				<Button variant="primary" size="medium" href="#join">Explore the club</Button>
 			  </div>
 			</div>
 		  </div>
@@ -118,7 +137,7 @@ import logo from "../assets/images/logo_white.svg"
 		   <Image src={wineclubs} alt="A curated collection of mixed wines with vibrant labels, arranged on a wooden table." class="inviewreturn lg:h-full object-cover border-0 rounded-[50px] order-last "/>
 		  <div class="h-full flex flex-col">
 			<h1 class="bg-white border-0 rounded-[50px] text-4xl md:text-large font-extralight text-blue-500 w-full py-3 px-[27px] h-[120px] flex items-center">
-			Join the wineclub
+			Join the wine club
 			</h1>
 			<div class="bg-white border-0 rounded-[50px] flex-grow flex flex-col justify-between">
 			
@@ -224,3 +243,6 @@ import logo from "../assets/images/logo_white.svg"
 	)
 
 </script>
+
+  
+  
